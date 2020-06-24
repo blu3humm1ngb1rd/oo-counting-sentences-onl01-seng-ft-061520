@@ -24,7 +24,7 @@ class String
     # if end with ". || ? || ! " = end of sentence - split here 
     #if self.end_with?("."||"?"||"!")
        sentence_split = self.split("."||"?"||"!")
-       if 
+      binding.pry 
        return sentence_split.count 
      #else 
        #return 0 
