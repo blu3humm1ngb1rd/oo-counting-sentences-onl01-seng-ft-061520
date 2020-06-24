@@ -26,7 +26,7 @@ class String
        sentence_split = self.split("."||"?"||"!")
        #sentence_split.each do |counter|
          #(counter.count < 2).delete 
-       end 
+       #end 
        return sentence_split.count 
      #else 
        #return 0 
