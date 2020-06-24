@@ -24,7 +24,9 @@ class String
     # if end with ". || ? || ! " = end of sentence - split here 
     #if self.end_with?("."||"?"||"!")
        sentence_split = self.split("."||"?"||"!")
-      binding.pry 
+       sentence_split.each do |counter|
+         (counter.count < 2).delete 
+       end 
        return sentence_split.count 
      #else 
        #return 0 
