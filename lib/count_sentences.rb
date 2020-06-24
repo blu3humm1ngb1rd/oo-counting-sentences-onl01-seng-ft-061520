@@ -26,10 +26,12 @@ class String
        
        #this will (.split) return an array ; 
        #we want to delete array item if less than 2 
-       #"Hey. I like soup!! Just kidding!?!" >> ["Hey", "I like soup!", "!", "Just kidding!", "?", "!"]
-       self.split("."||"?"||"!").delete_if do |counter|
+       #"Hey. I like soup!! Just kidding!?!" >> 
+       
+       self.split(/\.|\?|\!/).delete_if do |counter|
           counter.length < 2 
        end.count  
+       
        #return sentence_split.count 
      #else 
        #return 0 
