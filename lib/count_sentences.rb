@@ -29,8 +29,8 @@ class String
        #"Hey. I like soup!! Just kidding!?!" >> ["Hey", "I like soup!", "!", "Just kidding!", "?", "!"]
        sentence_split.delete_if do |counter|
           counter.length < 2 
-       end 
-       return sentence_split.count 
+       end.count  
+       #return sentence_split.count 
      #else 
        #return 0 
      #end 
