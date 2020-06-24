@@ -23,11 +23,11 @@ class String
   def count_sentences
     # if end with ". || ? || ! " = end of sentence - split here 
     #if self.end_with?("."||"?"||"!")
-       sentence_split = self.split("."||"?"||"!")
+       
        #this will (.split) return an array ; 
        #we want to delete array item if less than 2 
        #"Hey. I like soup!! Just kidding!?!" >> ["Hey", "I like soup!", "!", "Just kidding!", "?", "!"]
-       sentence_split.delete_if do |counter|
+       self.split("."||"?"||"!").delete_if do |counter|
           counter.length < 2 
        end.count  
        #return sentence_split.count 
