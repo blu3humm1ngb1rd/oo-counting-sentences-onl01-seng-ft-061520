@@ -28,7 +28,7 @@ class String
        #we want to delete array item if less than 2 
        #"Hey. I like soup!! Just kidding!?!" >> ["Hey", "I like soup!", "!", "Just kidding!", "?", "!"]
        sentence_split.delete_if do |counter|
-          counter.count < 2 
+          counter.length < 2 
        end 
        return sentence_split.count 
      #else 
