@@ -24,9 +24,12 @@ class String
     # if end with ". || ? || ! " = end of sentence - split here 
     #if self.end_with?("."||"?"||"!")
        sentence_split = self.split("."||"?"||"!")
-       #sentence_split.each do |counter|
-         #(counter.count < 2).delete 
-       #end 
+       #this will (.split) return an array ; 
+       #we want to delete array item if less than 2 
+       #"Hey. I like soup!! Just kidding!?!" >> ["Hey", "I like soup!", "!", "Just kidding!", "?", "!"]
+       sentence_split.delete_if do |counter|
+          counter.count < 2 
+       end 
        return sentence_split.count 
      #else 
        #return 0 
